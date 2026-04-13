@@ -58,7 +58,7 @@ ROOT_URLCONF = 'Transportes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:/Users/dyaxe/Documents/python 2/Central de Transportes/Transportes/Transportes/templates'],
+        'DIRS': [BASE_DIR /'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
