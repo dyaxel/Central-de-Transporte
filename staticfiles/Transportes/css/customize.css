@@ -1,0 +1,107 @@
+a{
+    color: white;
+    text-decoration: none;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+.logo{
+    height: 100;
+}
+
+.btn.logout{
+    text-align: right;
+    margin-top: 3ch;
+    margin-left: 6ch;
+    background-color: #ff0066;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn.logout:hover{
+    background-color: #5478FF;
+    color: white;
+}
+
+.fondo{
+    background-color: #53CBF3;
+}
+
+.top{
+    background-color: #FFDE42;
+}
+
+.card.tarjeta{
+    display: flex;               /* Activar Flexbox */
+    justify-content: center;     /* Centrar horizontalmente */
+    align-items: center;         /* Centrar verticalmente */
+    overflow: hidden;            /* Evitar que la imagen se salga */
+    background-color: #FFDE42;
+    color: black;
+    border-radius: 10px;  
+}
+
+.tarjeta:hover {
+    background-color: #5478FF; /* efecto hover */
+    color: white;
+}
+
+.card.tarjeta-2 {
+    background-color: #FFDE42; 
+}
+.tarjeta-3{
+    background-color: white;
+    text-align: center;
+}
+
+.botones-in{
+    margin-top: 100px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.btn-volver {
+    text-align: right;
+    margin-top: 3ch;
+    margin-left: 6ch;
+    background-color: #ff0066;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-volver:hover {
+    background-color: #5478FF;
+}
+
+.cabeza{
+    background-color: #111FA2;
+    color: white;
+}
+.cuerpo{
+    background-color: #5478FF;
+    color: white;
+}
+.btn.btn-comprar{
+    background-color: #ff0066;
+    color: white;
+}
+
+.btn.btn-comprar:hover {
+    background-color: #53CBF3;
+    color: black;
+}

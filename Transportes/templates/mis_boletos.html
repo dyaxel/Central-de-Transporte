@@ -1,0 +1,36 @@
+{% extends 'inicio.html'%}
+
+{% block section %}
+
+    <h1>MIS BOLETOS</h1>
+
+    <div class="container mt-4">
+        <div class="card shadow p-4 tarjeta-2">
+            <table class="table">
+                <thead class="cabeza">
+                    <tr>
+                        <th>NUMERO DE ASIENTO</th>
+                        <th>PASAJERO</th>
+                        <th>VIAJE</th>
+                    </tr>
+                </thead>
+
+                <tbody class="cuerpo">
+                    {% for boleto in boletos %}
+                        <tr>
+                            <td>{{boleto.numero_asiento}}</td>
+                            <td>{{boleto.pasajero}}</td>
+                            <td>{{boleto.viaje}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+{% endblock section %}
+
+{% block article %}
+
+{% endblock article %}

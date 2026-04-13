@@ -1,0 +1,46 @@
+{% extends 'inicio.html'%}
+
+
+{% block section %}
+
+    <h1></h1>
+    <h1>comprar boleto</h1>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-danger">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="container mt-4">
+        <div class="card shadow p-4 tarjeta-2">
+            <div class="tarjeta-3">
+            <p>Ruta: {{ viaje.ruta }}</p>
+            <p>Bus: {{ viaje.bus }}</p>
+            <p>Capacidad: {{ viaje.bus.capacidad }}</p>
+            </div>
+
+
+            <form method="post">
+                {% csrf_token %}
+                <div>
+                    {{ boleto_form.numero_asiento.label_tag }}
+                    {{ boleto_form.numero_asiento }}
+                </div>
+                <div>
+                    {{ boleto_form.pasajero.label_tag}}
+                    {{ boleto_form.pasajero}}
+                </div>
+                <button type="submit">Comprar</button>
+            </form>
+        </div>
+    </div>
+
+
+{% endblock section %}
+
+{% block article %}
+
+{% endblock article %}

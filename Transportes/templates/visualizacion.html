@@ -1,0 +1,78 @@
+{% extends 'inicio.html'%}
+
+
+{% block section %}
+
+    <h1 class="mt-4">AUTOBUSES, RUTAS Y VIAJES</h1>
+
+    <div class="container mt-4">
+        <div class="card shadow p-4 tarjeta-2">
+            <h2>AUTOBUSES</h2>
+            <table class="table">
+                <thead class="cabeza">
+                    <tr>
+                        <th>PLACA</th>
+                        <th>CAPACIDAD</th>
+                    </tr>
+                </thead>
+
+                <tbody class="cuerpo">
+                    {% for bus in autobuses %}
+                        <tr>
+                            <td>{{bus.placa}}</td>
+                            <td>{{bus.capacidad}} pasajeros</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <h2>RUTAS</h2>
+            <table class="table">
+                <thead class="cabeza">
+                    <tr>
+                        <th>ORIGEN</th>
+                        <th>DESTINO</th>
+                        <th>PRECIO</th>
+                    </tr>
+                </thead>
+
+                <tbody class="cuerpo">
+                    {% for rut in rutas %}
+                        <tr>
+                            <td>{{rut.origen}}</td>
+                            <td>{{rut.destino}}</td>
+                            <td>Q.{{rut.precio}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <h2>VIAJES</h2>
+            <table class="table">
+                <thead class="cabeza">
+                    <tr>
+                        <th>RUTA</th>
+                        <th>BUS</th>
+                        <th>FECHA Y HORA</th>
+                    </tr>
+                </thead>
+
+                <tbody class="cuerpo">
+                    {% for via in viajes %}
+                        <tr>
+                            <td>{{via.ruta}}</td>
+                            <td>{{via.bus}}</td>
+                            <td>{{via.fecha_y_hora}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+{% endblock section %}
+
+{% block article %}
+
+{% endblock article %}

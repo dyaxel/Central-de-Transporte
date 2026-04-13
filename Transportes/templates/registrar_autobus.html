@@ -1,0 +1,32 @@
+{% extends 'inicio.html'%}
+
+
+{% block section %}
+    
+    <h3>Registro de buses</h3>
+
+    <div class="container mt-4">
+        <div class="card shadow p-4 tarjeta-2">
+
+            <form action="/registrar_bus/" method="post">{%csrf_token%}
+                <div class="mb-3">
+                    {{bus_form.placa.label_tag}}
+                    {{bus_form.placa}}
+                </div>
+                <div class="mb-3">
+                    {{bus_form.capacidad.label_tag}}
+                    {{bus_form.capacidad}}
+                </div>
+                <div class="d-flex justify-content-between">
+                    <b></b>
+                    <button class="btn logout">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock section %}
+
+{% block article %}
+
+{% endblock article %}

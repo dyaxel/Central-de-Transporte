@@ -1,0 +1,42 @@
+{% extends 'inicio.html'%}
+
+
+{% block section %}
+
+    <h1>Registro de pasajero</h1>
+
+<div class="container mt-4">
+    <div class="card shadow p-4 tarjeta-2">
+
+        <form action="/registrar_pasajero/" method="post">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                {{ pasajero_form.dpi.label_tag }}
+                {{ pasajero_form.dpi }}
+            </div>
+
+            <div class="mb-3">
+                {{ pasajero_form.nombre.label_tag }}
+                {{ pasajero_form.nombre }}
+            </div>
+
+            <div class="mb-3">
+                {{ pasajero_form.correo.label_tag }}
+                {{ pasajero_form.correo }}
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <b></b>
+                <button class="btn logout">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock section %}
+
+{% block article %}
+
+{% endblock article %}

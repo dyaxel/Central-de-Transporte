@@ -1,0 +1,67 @@
+{% extends 'inicio.html'%}
+
+{% load static %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+<link rel="stylesheet" href="{% static 'Transportes/css/customize.css' %}">
+
+{% block section %}
+
+    <h1>REGISTRO DE BUSES, RUTAS Y VIAJES</h1>
+
+{% endblock section %}
+
+{% block article %}
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-2">
+                    <a href="{% url 'registrar_bus' %}">
+                        <div class="card tarjeta">
+                            <div class="card-body text-center">
+                                <img width="100" height="100" src="{% static '/Transportes/img/reg_bus.png' %}">
+                                <p class="card-text">Registrar nuevo autobus</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-2">
+                    <a href="{% url 'registrar_ruta' %}">
+                        <div class="card tarjeta">
+                            <div class="card-body text-center">
+                                <img width="100" height="100" src="{% static '/Transportes/img/reg_ruta.png' %}">
+                                <p class="card-text">Registrar nueva ruta</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-2">
+                    <a href="{% url 'registrar_viaje' %}">
+                        <div class="card tarjeta">
+                            <div class="card-body text-center">
+                                <img width="100" height="100" src="{% static '/Transportes/img/reg_viaje.png' %}">
+                                <p class="card-text">Registrar nuevo viaje</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-2">
+                    <a href="{% url 'visualizacion' %}">
+                        <div class="card tarjeta">
+                            <div class="card-body text-center">
+                                <img width="100" height="100" src="{% static '/Transportes/img/visualizar.png' %}">
+                                <p class="card-text">visualizar buses, rutas y viajes</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+{% endblock article %}
+Registrar nuevo autobus
+Registrar nueva ruta
+Registrar nuevo viaje
+visualizar (este es para visualizar los autobuses, rutas y viajes)

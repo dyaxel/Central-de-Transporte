@@ -1,0 +1,41 @@
+{% extends 'inicio.html'%}
+
+
+{% block section %}
+
+    <h1>VIAJES</h1>
+
+    <div class="container mt-4">
+        <div class="card shadow p-4 tarjeta-2">
+            <table class="table">
+                <thead class="cabeza">
+                    <tr>
+                        <th>RUTA</th>
+                        <th>BUS</th>
+                        <th>FECHA Y HORA</th>
+                        <th>COMPRAR</th>
+                    </tr>
+                </thead>
+
+                <tbody class="cuerpo">
+                    {% for viaje in viajes %}
+                        <tr>
+                            <td>{{viaje.ruta}}</td>
+                            <td>{{viaje.bus}}</td>
+                            <td>{{viaje.fecha_y_hora}}</td>
+                            <td>
+                                <a href="{% url 'comprar_boleto' viaje.id %}" class="btn btn-comprar">comprar boletos</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+{% endblock section %}
+
+{% block article %}
+
+{% endblock article %}
